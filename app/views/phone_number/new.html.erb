@@ -11,12 +11,17 @@
 <!--    </div>-->
   <%# end %>
 
-  <div class="field">
+  <div class="field" data-controller="number">
     <%= form.label :phone_number %>
-    <%= form.text_field :phone_number %>
+    <%= form.telephone_field :phone_number, data: { action: 'keyup->number#shapePhoneNumber', target: 'number'} %>
   </div>
+
+  <input id="tel" type="tel" name="phone" autocomplete="tel">
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+
+
