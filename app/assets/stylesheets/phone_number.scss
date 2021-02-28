@@ -1,3 +1,137 @@
 // Place all the styles related to the PhoneNumber controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@font-face {
+  font-family: 'gt-pressura-mono';
+  src: url("GTPressuraMono.ttf");
+}
+
+@font-face {
+  font-family: 'gt-pressura-regular';
+  src: url("GT-Pressura-Regular.ttf");
+}
+html {
+  height: 100%;
+  background-color: rgb(30, 93, 132);
+}
+
+.card {
+  border-radius: 3px;
+  margin: auto;
+  width: 550px;
+  color: rgb(30, 93, 132);
+  font-size: 18px;
+  font-weight: 100;
+  background-color: rgb(247, 245, 243)
+}
+
+.card .card-content {
+  padding: 50px;
+}
+
+.card .field {
+  position: relative;
+
+}
+.card .field input {
+  box-sizing: border-box;
+  border-color: rgb(30, 93, 132);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 3px;
+  display: block;
+  height: 55px;
+  width: 450px;
+  font-size: inherit;
+  color: inherit;
+  font-family: 'gt-pressura-mono', courier, courier-new, monospace;
+  padding-left: 35px;
+  cursor: text;
+  padding-top: 20px
+}
+
+.mobile-text {
+  position: absolute;
+  display: flex;
+  left: 35px;
+  box-sizing: border-box;
+  font-size: inherit;
+  color: inherit;
+  font-family: 'gt-pressura-regular', helvetica, arial, sans-serif;
+  transition: 0.2s;
+}
+
+.interacting {
+  font-size: 13.6px;
+}
+
+.invalid {
+  background-color: #fdf2f1;
+  color: #7a0a06 !important;
+  border: 0.2rem solid #d2322d !important;
+}
+
+.invalid:hover {
+  border: 0.2rem solid #9d100b;
+}
+
+.mobile-image {
+  position: absolute;
+  top: 15px;
+  margin-left: 10px;
+}
+
+.ok-img {
+  position: absolute;
+  top: 18px;
+  left: 415px;
+}
+
+.ok-img img {
+  height: 13px;
+  width: 13px;
+}
+
+.mobile-invalid-text {
+  font-family: "gt-pressura-regular", helvetica, arial, sans-serif;
+  color: #d2322d;
+  display: flex;
+  align-items: baseline;
+  text-align: left;
+  margin-bottom: 1.75rem;
+}
+
+.mobile-invalid-text-img {
+  position: relative;
+  top: 1px;
+  margin-right: 3px;
+}
+
+.submit-button {
+  margin: 3rem 0 1.5rem;
+  width: 100%;
+  background-color: #1e5d84;
+  color: #fff !important;
+  padding-top: 0 !important;
+}
+
+.info-icon {
+  height: 15px;
+  width: 15px;
+}
+
+.courier-info {
+  margin-top: 20px;
+}
+
+.courier-info-text {
+  font-family: "gt-pressura-regular", helvetica, arial, sans-serif;
+  color: #9c9896;
+  font-size: 16px;
+  text-align: left;
+}
+
+.hide {
+  display: none;
+}

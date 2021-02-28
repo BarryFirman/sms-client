@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="165b463e-536d-4586-a7f0-6a16a913f411" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/phone_number.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/phone_number.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/controllers/number_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/controllers/number_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/phone_number/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/phone_number/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/assets.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +36,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="CSS" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/bin/rails" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyModuleStructureConfigurable" />
   </component>
-  <component name="RunManager" selected="Ruby Console.Console - Sandbox - development">
+  <component name="RunManager" selected="Rails.Development: sms_client">
     <configuration name="Console - Sandbox - development" type="IrbRunConfigurationType" factoryName="IRB console">
       <module name="sms_client" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -228,6 +233,7 @@
       <updated>1614438415521</updated>
       <workItem from="1614438416608" duration="754000" />
       <workItem from="1614439188616" duration="1268000" />
+      <workItem from="1614494042406" duration="27142000" />
     </task>
     <servers />
   </component>
@@ -235,7 +241,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sms_client@Development__sms_client.rcov" NAME="Development: sms_client Coverage Results" MODIFIED="1614439190712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="sms_client" />
+    <SUITE FILE_PATH="coverage/sms_client@Development__sms_client.rcov" NAME="Development: sms_client Coverage Results" MODIFIED="1614528941950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="sms_client" />
     <SUITE FILE_PATH="coverage/sms_client@Console___Sandbox___development.rcov" NAME="Console - Sandbox - development Coverage Results" MODIFIED="1614440635892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="sms_client" />
   </component>
 </project>

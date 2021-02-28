@@ -1,10 +1,46 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "output" ]
+  static targets = [ "mobile", "errorMsg", "okImg"]
 
 
   connect() {
-  console.log('hello from number controller')
+    let mobile = document.getElementById('phone_number_phone_number');
+    if(mobile.value > 0) {
+      mobile.classList.add('interacting')
+    }
+  }
+
+  toggleInteracting(event) {
+    if(this.mobileTarget.classList.contains('interacting')) {
+      if(event.target.value.length == 0) {
+        this.mobileTarget.classList.remove('interacting')
+      }
+    } else {
+      this.mobileTarget.classList.add('interacting')
+    }
+
+  }
+
+  shapeNumber(event) {
+    let keyRegex = new RegExp('^(\\+|[0-9]|\\s)$')
+    let valueRegex = new RegExp('^(\\+44|44|0)7[0-9]{3} [0-9]{6}$')
+    let str = event.target.value + event.key
+
+    console.log('str', str)
+    console.log('event.target.value', event.target.value)
+    if(!keyRegex.test(event.key) && event.key != 'Backspace') {
+      event.preventDefault();
+    }
+
+    if (valueRegex.test(str)|| (event.target.value.length == 1 && event.key == 'Backspace' )) {
+      event.target.classList.remove('invalid')
+      this.errorMsgTarget.classList.add('hide')
+      this.okImgTarget.classList.remove('hide')
+    } else {
+      event.target.classList.add('invalid')
+      this.errorMsgTarget.classList.remove('hide')
+      this.okImgTarget.classList.add('hide')
+    }
   }
 }

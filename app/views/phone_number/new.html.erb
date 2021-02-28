@@ -1,22 +1,38 @@
-<h1>PhoneNumber#new</h1>
-<%= form_with(scope: :phone_number, url: phone_number_create_path ) do |form| %>
-  <%# if postcode_allow_list.errors.any? %>
-<!--    <div id="error_explanation">-->
-<!--      <h2><%#= pluralize(postcode_allow_list.errors.count, 'error') %> stopped this record from being saved</h2>-->
-<!--      <ul>-->
-        <%# postcode_allow_list.errors.each do |error| %>
-<!--          <li><%#= error.full_message %></li>-->
-        <%# end %>
-<!--      </ul>-->
-<!--    </div>-->
-  <%# end %>
+<div class="card">
+  <div class="card-content">
+    <%= form_with(scope: :phone_number, url: phone_number_create_path ) do |form| %>
+      <%# if postcode_allow_list.errors.any? %>
+    <!--    <div id="error_explanation">-->
+    <!--      <h2><%#= pluralize(postcode_allow_list.errors.count, 'error') %> stopped this record from being saved</h2>-->
+    <!--      <ul>-->
+            <%# postcode_allow_list.errors.each do |error| %>
+    <!--          <li><%#= error.full_message %></li>-->
+            <%# end %>
+    <!--      </ul>-->
+    <!--    </div>-->
+      <%# end %>
 
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number %>
-  </div>
+      <div class="field" data-controller="number">
+        <%#= form.label 'Your mobile number', for: :phone_number
+        %>
+        <span class="mobile-image"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/dd0f3984-756b-4326-b263-10eb310bd54d/mobile-icon.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210228T160629Z&X-Amz-Expires=86400&X-Amz-Signature=332c883baf0e44fbeb377a872b82da05bec1158e51626c391c0b7abb1eebe7ce&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22mobile-icon.svg%22" /></span>
+        <p class="mobile-text" data-number-target="mobile">Your mobile number</p>
+        <%= telephone_field('phone_number', 'phone_number', required: true, maxlength: 14, pattern: "^(\\+44|44|0)7[0-9]{3} [0-9]{6}$", data: { action: "focus->number#toggleInteracting blur->number#toggleInteracting keydown->number#shapeNumber" })%>
+      <p class="mobile-invalid-text hide" data-number-target="errorMsg"><span class="mobile-invalid-text-img">
+        <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2749eacd-7763-4a6e-9635-f023eef38b0d/red-cross.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210228T131100Z&X-Amz-Expires=86400&X-Amz-Signature=7708e21ba75bb8503ab96f1027e2398594a5e18f78d6150d9dca0b8be99a578c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22red-cross.svg%22" />
+        </span> Please enter a valid UK mobile number.</p>
+        <span class="ok-img" data-number-target="okImg"><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fb385c40-3df0-4aff-a73a-ca65554b8ce5/green-checkmark.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210228T161402Z&X-Amz-Expires=86400&X-Amz-Signature=46e792ebe138f64e7ab82db2feceb7109179a8566624aba7926df0c8ca962959&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22green-checkmark.svg%22" /></span>
 
-  <div class="actions">
-    <%= form.submit %>
+        <div class="courier-info">
+          <span class="info-icon-container">
+            <img class="info-icon" src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b18e0fc5-7416-469d-8dcd-6469225b5f72/icon-info.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210228%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210228T165505Z&X-Amz-Expires=86400&X-Amz-Signature=13a4772a28d936a1f4e21663b2732e5d3ef6288161bd2a7b23d433490d1e5e63&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22icon-info.svg%22" />
+            <span class="courier-info-text">Your courier will text you on the day with a delivery time slot. This is optional.</span>
+          </span>
+        </div>
+        <div class="actions">
+        <%= form.submit 'SUBMIT PHONE NUMBER', class: 'submit-button' %>
+      </div>
+    <% end %>
+    </div>
   </div>
-<% end %>
+</div>
