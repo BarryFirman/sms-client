@@ -19,21 +19,18 @@ export default class extends Controller {
     } else {
       this.mobileTarget.classList.add('interacting')
     }
-
   }
 
   shapeNumber(event) {
     let keyRegex = new RegExp('^(\\+|[0-9]|\\s)$')
     let valueRegex = new RegExp('^(\\+44|44|0)7[0-9]{3} [0-9]{6}$')
-    let str = event.target.value + event.key
 
-    console.log('str', str)
+    console.log('event.key', event.key)
     console.log('event.target.value', event.target.value)
     if(!keyRegex.test(event.key) && event.key != 'Backspace') {
       event.preventDefault();
     }
-
-    if (valueRegex.test(str)|| (event.target.value.length == 1 && event.key == 'Backspace' )) {
+    if (valueRegex.test(event.target.value)|| (event.target.value.length == 1 && event.key == 'Backspace')) {
       event.target.classList.remove('invalid')
       this.errorMsgTarget.classList.add('hide')
       this.okImgTarget.classList.remove('hide')
