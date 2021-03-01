@@ -21,16 +21,11 @@ Enter the mobile phone number in the following formats:
 
 `bundle install`
 
-### Create and seed database:
-
-`rails db:migrate`
-
 ## Dependencies
 This application has the following dependencies
 
 - [Stimulus](https://stimulus.hotwire.dev/handbook/hello-stimulus) : For frontend automations.
 
 ## Versions:
-
 - Ruby 2.7.2
 - Rails ~> 6.1.3
