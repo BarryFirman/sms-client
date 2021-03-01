@@ -1,24 +1,36 @@
-# README
+# Mobile Phoner Number Client
+An application that automically formats and validates a mobile telephone number before sending to a Rail API.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usage
+Enter the mobile phone number in the following formats:
+- 07...
+- 44 7...
+- +44 7...
 
-Things you may want to cover:
+## Getting Started
+- Clone the repository
 
-* Ruby version
+- Change directory to the root of repository
 
-* System dependencies
+### Prerequisites :
 
-* Configuration
+- [Webpacker](https://github.com/rails/webpacker) : Ensure Webpacker prerequisites and dependencies are installed and configured.
 
-* Database creation
 
-* Database initialization
+### Install Gems:
 
-* How to run the test suite
+`bundle install`
 
-* Services (job queues, cache servers, search engines, etc.)
+### Create and seed database:
 
-* Deployment instructions
+`rails db:migrate`
 
-* ...
+## Dependencies
+This application has the following dependencies
+
+- [Stimulus](https://stimulus.hotwire.dev/handbook/hello-stimulus) : For frontend automations.
+
+## Versions:
+
+- Ruby 2.7.2
+- Rails ~> 6.1.3

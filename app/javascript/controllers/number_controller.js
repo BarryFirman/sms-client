@@ -42,7 +42,7 @@ export default class extends Controller {
         event.target.value = event.target.value + ' '
     }
 
-    if (valueRegex.test(event.target.value) || (event.target.value.length == 1 && event.key == 'Backspace')) {
+    if (valueRegex.test(event.target.value) || (event.target.value.length <= 1 && event.key == 'Backspace')) {
       event.target.classList.remove('invalid')
       this.errorMsgTarget.classList.add('hide')
       this.okImgTarget.classList.remove('hide')
