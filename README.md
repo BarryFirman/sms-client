@@ -1,6 +1,10 @@
 # Mobile Phone Number Client
 An application that automatically formats and validates a mobile telephone number before sending to a Rail API.
 
+There is a backend component to this project
+
+[https://github.com/BarryFirman/sms_client] - (https://github.com/BarryFirman/sms_client)
+
 ## Usage
 Enter the mobile phone number in the following formats:
 - 07...
