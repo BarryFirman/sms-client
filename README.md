@@ -1,5 +1,5 @@
-# Mobile Phoner Number Client
-An application that automically formats and validates a mobile telephone number before sending to a Rail API.
+# Mobile Phone Number Client
+An application that automatically formats and validates a mobile telephone number before sending to a Rail API.
 
 ## Usage
 Enter the mobile phone number in the following formats:
