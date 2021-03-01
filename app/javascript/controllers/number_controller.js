@@ -18,16 +18,19 @@ export default class extends Controller {
       }
     } else {
       this.mobileTarget.classList.add('interacting')
-    }0
+    }
   }
 
-  shapeNumber(event) {
+  validEntry(event) {
     let keyRegex = new RegExp('^(\\+|[0-9]|\\s)$')
-    let valueRegex = new RegExp('^(\\+44.|44.|0)7[0-9]{3} [0-9]{6}$')
 
     if (!keyRegex.test(event.key) && event.key != 'Backspace') {
       event.preventDefault();
     }
+  }
+  shapeNumber(event) {
+
+    let valueRegex = new RegExp('^(\\+44.|44.|0)7[0-9]{3} [0-9]{6}$')
 
     if(event.target.value.match(/^\+44$/) && event.key != 'Backspace') {
       event.target.maxLength = 15

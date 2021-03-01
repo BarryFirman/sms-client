@@ -8,7 +8,7 @@ class PhoneNumberController < ApplicationController
   def create
     uri = URI("#{URL_ROOT}/phone_number/create")
     Net::HTTP.post_form(uri, 'phone_number[phone_number]' => params[:phone_number][:phone_number])
-    redirect_to phone_number_new_path
+    redirect_to root_path
 
   end
 end
