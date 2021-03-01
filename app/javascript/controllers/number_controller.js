@@ -18,19 +18,31 @@ export default class extends Controller {
       }
     } else {
       this.mobileTarget.classList.add('interacting')
-    }
+    }0
   }
 
   shapeNumber(event) {
     let keyRegex = new RegExp('^(\\+|[0-9]|\\s)$')
-    let valueRegex = new RegExp('^(\\+44|44|0)7[0-9]{3} [0-9]{6}$')
+    let valueRegex = new RegExp('^(\\+44.|44.|0)7[0-9]{3} [0-9]{6}$')
 
-    console.log('event.key', event.key)
-    console.log('event.target.value', event.target.value)
-    if(!keyRegex.test(event.key) && event.key != 'Backspace') {
+    if (!keyRegex.test(event.key) && event.key != 'Backspace') {
       event.preventDefault();
     }
-    if (valueRegex.test(event.target.value)|| (event.target.value.length == 1 && event.key == 'Backspace')) {
+
+    if(event.target.value.match(/^\+44$/) && event.key != 'Backspace') {
+      event.target.maxLength = 15
+      event.target.value = event.target.value + ' '
+    } else if(event.target.value.match(/^44$/) && event.key != 'Backspace') {
+      event.target.maxLength = 14
+      event.target.value = event.target.value + ' '
+    } else if(event.target.value.match(/^(\+44|44) [0-9]{4}$/) && event.key != 'Backspace') {
+      event.target.value = event.target.value + ' '
+    } else if(event.target.value.match(/^[0-9]{5}$/) && event.key != 'Backspace') {
+        event.target.maxLength = 12
+        event.target.value = event.target.value + ' '
+    }
+
+    if (valueRegex.test(event.target.value) || (event.target.value.length == 1 && event.key == 'Backspace')) {
       event.target.classList.remove('invalid')
       this.errorMsgTarget.classList.add('hide')
       this.okImgTarget.classList.remove('hide')
@@ -39,5 +51,6 @@ export default class extends Controller {
       this.errorMsgTarget.classList.remove('hide')
       this.okImgTarget.classList.add('hide')
     }
+
   }
 }

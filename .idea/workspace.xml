@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="165b463e-536d-4586-a7f0-6a16a913f411" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sms_client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sms_client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/controllers/number_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/controllers/number_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/phone_number/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/phone_number/new.html.erb" afterDir="false" />
     </list>
@@ -231,7 +229,8 @@
       <updated>1614438415521</updated>
       <workItem from="1614438416608" duration="754000" />
       <workItem from="1614439188616" duration="1268000" />
-      <workItem from="1614494042406" duration="28039000" />
+      <workItem from="1614494042406" duration="28895000" />
+      <workItem from="1614578589749" duration="4927000" />
     </task>
     <servers />
   </component>
@@ -239,7 +238,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sms_client@Development__sms_client.rcov" NAME="Development: sms_client Coverage Results" MODIFIED="1614528941950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="sms_client" />
+    <SUITE FILE_PATH="coverage/sms_client@Development__sms_client.rcov" NAME="Development: sms_client Coverage Results" MODIFIED="1614578601154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="sms_client" />
     <SUITE FILE_PATH="coverage/sms_client@Console___Sandbox___development.rcov" NAME="Console - Sandbox - development Coverage Results" MODIFIED="1614440635892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="sms_client" />
   </component>
 </project>
