@@ -22,14 +22,20 @@ export default class extends Controller {
   }
 
   validEntry(event) {
-    let keyRegex = new RegExp('^(\\+|[0-9]|\\s)$')
-
-    if (!keyRegex.test(event.key) && event.key != 'Backspace') {
-      event.preventDefault();
+    console.log('event.target.value', event.target.value, 'event.target.value.length', event.target.value.length )
+    console.log('event.key', event.key)
+    if(event.target.value.length === 0) {
+      console.log('checking first char')
+      if (!event.key.match(/^(\+|[0-9])$/) && event.key != 'Backspace') {
+        event.preventDefault()
+      }
+    } else {
+      if(!event.key.match(/^[0-9]$/) && event.key != 'Backspace') {
+        event.preventDefault()
+      }
     }
   }
   shapeNumber(event) {
-
     let valueRegex = new RegExp('^(\\+44.|44.|0)7[0-9]{3} [0-9]{6}$')
 
     if(event.target.value.match(/^\+44$/) && event.key != 'Backspace') {
