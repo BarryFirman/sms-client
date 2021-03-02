@@ -30,6 +30,12 @@ This application has the following dependencies
 
 - [Stimulus](https://stimulus.hotwire.dev/handbook/hello-stimulus) : For frontend automations.
 
+
+## Demonstration Site
+The application has been built here for demonstration purposes:
+
+[https://shielded-sea-07507.herokuapp.com/](https://shielded-sea-07507.herokuapp.com/)
+
 ## Versions:
 - Ruby 2.7.2
 - Rails ~> 6.1.3
